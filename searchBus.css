@@ -1,0 +1,152 @@
+.searchBussection {
+  padding-top: 150px;
+  background-color: #fff;
+}
+.locationText {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.locationText p {
+  margin-bottom: 0;
+}
+.locationText span {
+  font-weight: lighter;
+}
+.filterWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.filterBus {
+  width: 30%;
+  /* height: 400px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px 15px;
+  border-radius: 30px;
+}
+.filterBus h4 {
+  font-size: 23px;
+}
+.filterBus .buttons button {
+  padding: 7px 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border: 1px solid #0d0246;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.filterBus .buttons button:hover {
+  background-color: #0d0246;
+  color: #fff;
+  transition: 0.5s;
+}
+.busCards {
+  width: 68%;
+  border-radius: 30px;
+}
+.busCard {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 30px;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.busCards p {
+  margin-bottom: 0;
+}
+.busName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.busHeading p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.rating {
+  width: 60px;
+  background-color: rgb(206, 202, 202);
+  text-align: center;
+  border-radius: 10px;
+}
+.star {
+  width: 100%;
+  padding: 4px;
+  background-color: green;
+  border-radius: 10px;
+  color: #fff;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.busPhoto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.seatButton button {
+  padding: 10px 20px;
+  background-color: #0d0246;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+}
+.busWrapper {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .filterWrapper {
+    flex-direction: column;
+  }
+  .filterBus {
+    width: 100%;
+  }
+  .busCards {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .filterWrapper {
+    flex-direction: column;
+  }
+  .filterBus {
+    width: 100%;
+  }
+  .busCards {
+    width: 100%;
+  }
+  .busName {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: start;
+    /* background-color: red; */
+  }
+  .busPhoto {
+    display: none;
+  }
+
+  .busWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .busCard {
+    position: relative;
+    margin-top: 30px;
+  }
+  .rating {
+    position: absolute;
+    right: 6%;
+    bottom: 10%;
+  }
+}
