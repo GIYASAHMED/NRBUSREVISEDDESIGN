@@ -216,10 +216,11 @@ header {
   gap: 20px;
   align-items: center;
   margin-top: 20px;
+  text-align: center;
 }
 .t {
   width: 100%;
-  background-color: #0d0246a0;
+  background-color: #0d0246e0;
   padding: 10px 14px;
   border-radius: 10px;
   color: #fff;
