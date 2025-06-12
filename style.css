@@ -142,8 +142,7 @@ header {
     display: none;
   }
 
-  /*  */
-
+  /* Mobile Account  */
   .userDiv {
     position: absolute;
     top: -130%;
@@ -152,10 +151,6 @@ header {
 }
 
 @media (max-width: 358px) {
-  /* .mobileMenuLinks.active {
-    right: 0;
-    transition: 0.5s;
-  } */
   .mobileMenuLinks {
     padding: 5px;
   }
@@ -164,5 +159,166 @@ header {
   }
   .rightIcons i {
     margin-right: 0;
+  }
+}
+
+/* Hero section start */
+#heroBanner {
+  width: 100%;
+  height: 50vh;
+  background-image: url("./HomeBanner.webp");
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.heroText {
+  color: #fff;
+}
+.heroText h1 {
+  font-size: 2.7vw;
+}
+.fieldsWrapper {
+  position: relative;
+  top: -40px;
+  padding: 20px 20px 40px 20px;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.fieldsWrapper h4 {
+  display: none;
+}
+.inputFieldsBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.generalField {
+  width: 70%;
+  display: flex;
+  border: 1px solid rgb(140, 137, 137);
+  border-radius: 30px;
+}
+.field {
+  width: 100%;
+  padding: 10px 20px;
+}
+.b {
+  border-right: 1px solid black;
+}
+.fieldItems {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.fieldItems i {
+  font-size: 20px;
+}
+.labels {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.labels label {
+  color: gray;
+}
+
+.labels input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.labels p {
+  margin-bottom: 0;
+}
+.women {
+  width: 26%;
+  border: 1px solid rgb(140, 137, 137);
+  border-radius: 30px;
+}
+
+.searchBus {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  max-width: 400px;
+  margin: auto;
+}
+.searchBus button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #d63941;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+}
+.searchBus button i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+@media (max-width: 972px) {
+  .heroText h1 {
+    font-size: 5vw;
+  }
+  .inputFieldsBar {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .generalField {
+    width: 100%;
+    flex-direction: column;
+  }
+  .women {
+    width: 100%;
+  }
+  .b {
+    border-bottom: 1px solid rgb(140, 137, 137);
+    border-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroText h1 {
+    font-size: 5vw;
+  }
+  .inputFieldsBar {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .generalField {
+    width: 100%;
+    flex-direction: column;
+  }
+  .women {
+    width: 100%;
+  }
+  .b {
+    border-bottom: 1px solid rgb(140, 137, 137);
+    border-right: 0;
+  }
+  #heroBanner {
+    display: none;
+  }
+  .fieldsWrapper {
+    top: 150px;
+    box-shadow: none;
+  }
+  .fieldsWrapper h4 {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 27px;
+  }
+  .searchBus {
+    position: initial;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
   }
 }

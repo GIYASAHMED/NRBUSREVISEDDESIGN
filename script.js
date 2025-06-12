@@ -1,11 +1,4 @@
-// let hamMenu = document.querySelector("#hamMenu");
-// let mobileMenuLinks = document.querySelector(".mobileMenuLinks");
-// let mmenu = document.querySelector(".mmenu");
-// hamMenu.addEventListener("click", () => {
-//   mobileMenuLinks.classList.toggle("active");
-//   mmenu.classList.toggle("ri-close-large-fill");
-// });
-
+// Desktop Account
 let account = document.querySelector("#acco");
 let userDiv = document.querySelector(".userDiv");
 
@@ -13,6 +6,7 @@ account.addEventListener("click", () => {
   userDiv.classList.toggle("active");
 });
 
+// Mobile account
 let account2 = document.querySelector("#acco2");
 let userDiv2 = document.querySelector(".userDiv2");
 
