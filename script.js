@@ -13,3 +13,8 @@ let userDiv2 = document.querySelector(".userDiv2");
 account2.addEventListener("click", () => {
   userDiv2.classList.toggle("active");
 });
+
+let bus = document.querySelector("#bus");
+bus.addEventListener("click", () => {
+  window.location.href = "searchBus.html";
+});
