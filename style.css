@@ -200,7 +200,7 @@ header {
   width: 70%;
   display: flex;
   border: 1px solid rgb(140, 137, 137);
-  border-radius: 30px;
+  border-radius: 20px;
 }
 .field {
   width: 100%;
@@ -237,7 +237,7 @@ header {
 .women {
   width: 26%;
   border: 1px solid rgb(140, 137, 137);
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .searchBus {
@@ -287,6 +287,10 @@ header {
   .heroText h1 {
     font-size: 5vw;
   }
+  .field {
+    width: 100%;
+    padding: 3px 20px;
+  }
   .inputFieldsBar {
     flex-direction: column;
     gap: 30px;
@@ -306,7 +310,7 @@ header {
     display: none;
   }
   .fieldsWrapper {
-    top: 115px;
+    top: 110px;
     box-shadow: none;
   }
   .fieldsWrapper h4 {
