@@ -71,7 +71,7 @@ header {
     right: -100%;
     height: fit-content;
     background-color: #f1f1f1;
-    padding: 20px 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: start;
