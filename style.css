@@ -180,6 +180,7 @@ header {
 .heroText h1 {
   font-size: 3.7vw;
   text-transform: capitalize;
+  letter-spacing: -3px;
 }
 .fieldsWrapper {
   position: relative;
@@ -208,6 +209,26 @@ header {
   width: 100%;
   padding: 10px 20px;
 }
+
+.day {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+.t {
+  width: 100%;
+  background-color: #0d0246a0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.mobileday {
+  display: none;
+}
 .b {
   border-right: 1px solid black;
 }
@@ -215,16 +236,8 @@ header {
   display: flex;
   gap: 20px;
   align-items: center;
-  overflow-x: scroll;
 }
-.fieldItems .t {
-  background-color: #0d0246a0;
-  padding: 10px 14px;
-  border-radius: 20px;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-}
+
 .fieldItems i {
   font-size: 20px;
 }
@@ -303,9 +316,7 @@ header {
     width: 100%;
     flex-direction: column;
   }
-  .women {
-    width: 100%;
-  }
+
   .b {
     border-bottom: 1px solid rgb(140, 137, 137);
     border-right: 0;
@@ -329,6 +340,12 @@ header {
     width: 100%;
     margin: auto;
   }
+  .desktopday {
+    display: none;
+  }
+  .mobileday {
+    display: flex;
+  }
 }
 
 @media (max-width: 485px) {
@@ -351,5 +368,8 @@ header {
   }
   .labels label {
     font-size: 14px;
+  }
+  .searchBar {
+    padding-bottom: 200px;
   }
 }
