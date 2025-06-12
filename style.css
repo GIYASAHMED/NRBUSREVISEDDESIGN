@@ -84,13 +84,14 @@ header {
     transition: 0.5s;
   }
   .rightIcons {
+    width: 150px;
     display: flex;
     border: none;
     margin-bottom: 10px;
   }
   .rightIcons i {
     font-size: 20px;
-    margin-right: 7px;
+    margin-right: 13px;
   }
   .rightIcons a span {
     font-size: 14px;
