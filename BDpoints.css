@@ -1,0 +1,44 @@
+/* BOARDING DROPPING CSS */
+.container {
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0d0246;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none; /* initially hidden */
+}
+
+button:hover {
+  background-color: #0d0246c8;
+}
+/* BOARDING DROPPING CSS */
