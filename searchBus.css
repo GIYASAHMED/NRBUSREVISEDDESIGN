@@ -243,3 +243,7 @@ input[type="radio"] {
     bottom: 10%;
   }
 }
+
+.btnClick {
+  cursor: pointer;
+}
