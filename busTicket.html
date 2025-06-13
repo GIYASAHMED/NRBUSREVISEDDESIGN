@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bus Ticket Payment</title>
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .logoBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .mainLogo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .brandHeading {
+        text-transform: capitalize;
+        font-family: "Dancing Script", cursive;
+        color: #0d0246;
+      }
+      .container {
+        background: #fff;
+        padding: 30px;
+        max-width: 700px;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+      }
+
+      .ticket-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .ticket-details div {
+        background-color: #f9f9f9;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      .ticket-details strong {
+        color: #555;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .pay-btn {
+        background-color: #007bff;
+        color: white;
+        margin-top: 20px;
+      }
+
+      .pay-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .download-btn {
+        background-color: #28a745;
+        color: white;
+        display: none;
+      }
+
+      .download-btn:hover {
+        background-color: #1e7e34;
+      }
+      .ticketHeading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-bottom: 40px;
+      }
+      .ticketHeading i {
+        font-size: 30px;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+      }
+
+      @media (max-width: 600px) {
+        .ticket-details {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logoBox">
+        <img src="./mainLogo.png" class="mainLogo" alt="" />
+        <span class="brandHeading">Where luxury meets safety & comfort</span>
+      </div>
+
+      <div class="ticketHeading">
+        <i class="ri-arrow-left-line" id="back"></i>
+        <h2>Ticket Confirmation</h2>
+      </div>
+
+      <div class="ticket-details" id="ticketDetails">
+        <div><strong>Name:</strong> John Doe</div>
+        <div><strong>Age:</strong> 28</div>
+        <div><strong>Gender:</strong> Male</div>
+        <div><strong>Mobile:</strong> +91 9876543210</div>
+        <div><strong>Email:</strong> john.doe@example.com</div>
+        <div><strong>Seat No:</strong> A3</div>
+        <div><strong>Bus Name:</strong> Assam Volvo A/C</div>
+        <div><strong>Route:</strong> Guwahati ISBT → Tezpur Terminal</div>
+        <div><strong>Boarding Point:</strong> Guwahati ISBT</div>
+        <div><strong>Dropping Point:</strong> Tezpur Terminal</div>
+        <div><strong>Date:</strong> 15-06-2025</div>
+        <div><strong>Time:</strong> 14:20 → 17:40</div>
+        <div><strong>Fare:</strong> ₹540</div>
+      </div>
+
+      <button class="btn pay-btn" onclick="completePayment()">Pay ₹540</button>
+      <button
+        class="btn download-btn"
+        id="downloadBtn"
+        onclick="window.print()"
+      >
+        Download Ticket
+      </button>
+    </div>
+
+    <script>
+      function completePayment() {
+        // Simulate successful payment
+        document.querySelector(".pay-btn").style.display = "none";
+        // if you need payment page here is the link for redirect to payment.html....
+        // window.location.href = "payment.html";
+        document.getElementById("downloadBtn").style.display = "block";
+        alert("Payment successful! Your ticket is ready.");
+      }
+
+      let back = document.querySelector("#back");
+      back.addEventListener("click", () => {
+        window.location.href = "info.html";
+      });
+    </script>
+  </body>
+</html>

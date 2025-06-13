@@ -80,7 +80,13 @@
 
             <!-- <label for="state">State</label> -->
           </form>
-          <button type="submit" class="submit-btn mt-5">Submit</button>
+          <div class="amount">
+            <h5>Amount</h5>
+            <h5>₹ 540.00</h5>
+          </div>
+          <button type="submit" class="submit-btn" id="booking">
+            Continue Booking
+          </button>
         </div>
 
         <div class="busDetails">
@@ -134,6 +140,12 @@
       let closeIcon = document.querySelector(".closeIcon");
       closeIcon.addEventListener("click", () => {
         window.location.href = "BDpoints.html";
+      });
+
+      let booking = document.querySelector("#booking");
+
+      booking.addEventListener("click", () => {
+        window.location.href = "busTicket.html";
       });
     </script>
   </body>

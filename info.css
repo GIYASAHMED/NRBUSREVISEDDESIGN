@@ -8,6 +8,7 @@
   gap: 30px;
   align-items: center;
   border-radius: 20px;
+  z-index: 99;
 }
 .destinationBar i {
   font-size: 30px;
@@ -73,7 +74,13 @@ select {
   border-radius: 5px;
   font-size: 15px;
 }
-
+.amount {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
 .submit-btn {
   width: 100%;
   padding: 12px;
@@ -163,8 +170,11 @@ select {
   }
   .contactWrapper {
     width: 100%;
+    order: 1;
   }
   .busDetails {
     width: 100%;
+    order: 0;
+    margin-bottom: 20px;
   }
 }
