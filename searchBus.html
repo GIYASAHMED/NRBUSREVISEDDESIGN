@@ -158,7 +158,7 @@
               <div class="busCards">
                 <!-- bus Card -->
 
-                <div class="busCard">
+                <div class="busCard bc">
                   <div class="busName">
                     <div class="busWrapper">
                       <div class="busHeading">
@@ -196,17 +196,54 @@
                       </p>
                       <p><a href="" class="text-black">Bus Photos</a></p>
                     </div>
-                    <div class="seatButton">
-                      <button id="viewSeat">
-                        <a href="seatDetails.html" class="text-white"
-                          >View Seats</a
-                        >
-                      </button>
+                    <div class="seatButton bc">
+                      <button id="viewSeat">View Seats</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="overlay">
+          <div class="form-container">
+            <h2>Register/Login</h2>
+            <form>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                  <option value="">-- Select Gender --</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobile"
+                  placeholder="Enter your mobile number"
+                  required
+                />
+              </div>
+
+              <div class="form-buttons">
+                <button type="submit">Register</button>
+                <button type="button">Login</button>
+              </div>
+            </form>
           </div>
         </div>
 
@@ -222,6 +259,15 @@
           crossorigin="anonymous"
         ></script>
         <script src="script.js"></script>
+        <script>
+          let busCard = document.querySelector(".bc");
+          let popUp = document.querySelector(".popUp");
+          let overlay = document.querySelector(".overlay");
+
+          busCard.addEventListener("click", () => {
+            overlay.classList.add("active");
+          });
+        </script>
       </body>
     </html>
   </body>

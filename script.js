@@ -14,7 +14,7 @@ account2.addEventListener("click", () => {
   userDiv2.classList.toggle("active");
 });
 
-let bus = document.querySelector("#bus");
-bus.addEventListener("click", () => {
+let searchbus = document.querySelector("#bus");
+searchbus.addEventListener("click", () => {
   window.location.href = "searchBus.html";
 });

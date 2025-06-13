@@ -104,6 +104,81 @@
   gap: 30px;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 10px;
+  background-color: #0d0246;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-buttons button:hover {
+  background-color: #0d0246c7;
+}
+
+@media (max-width: 480px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+}
+.overlay.active {
+  display: flex;
+}
+
 @media (max-width: 1200px) {
   .filterWrapper {
     flex-direction: column;
