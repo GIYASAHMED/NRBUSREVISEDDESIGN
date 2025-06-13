@@ -9,8 +9,9 @@
   align-items: center;
   border-radius: 20px;
 }
-.closeIcon i {
+.seatClose i {
   font-size: 30px;
+  cursor: pointer;
 }
 .destinationBar p {
   margin-bottom: 0;

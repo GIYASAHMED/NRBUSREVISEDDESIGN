@@ -31,7 +31,7 @@
       <body>
         <div class="container py-5">
           <div class="destinationBar">
-            <div class="closeIcon"><i class="ri-close-fill"></i></div>
+            <div class="seatClose"><i class="ri-close-fill"></i></div>
             <div><p>Khanapara, Guwahati -> Jorhat</p></div>
           </div>
           <div class="contentWrapper">
@@ -102,12 +102,15 @@
 
         <!-- Boarding dropping JS -->
         <script>
-          // When select seat then select your Boarding and Dropping Points
+          // Seat page close //
+          let seatClose = document.querySelector(".seatClose");
+          seatClose.addEventListener("click", () => {
+            window.location.href = "searchBus.html";
+          });
+          // Click seat then select your Boarding and Dropping Points
           let seat = document.querySelector("#seat");
           let selectPoint = document.querySelector(".selectPoint");
           seat.addEventListener("click", () => {
-            console.log("hello");
-
             selectPoint.classList.toggle("active");
           });
 
