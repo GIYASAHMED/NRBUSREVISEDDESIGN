@@ -1,13 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  padding: 20px;
+.destinationBar {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #f1f1f1;
+  position: sticky;
+  top: 0;
   display: flex;
-  justify-content: center;
+  gap: 30px;
   align-items: center;
-  min-height: 100vh;
+  border-radius: 20px;
+}
+.destinationBar i {
+  font-size: 30px;
+  cursor: pointer;
 }
 
+.destinationBar p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
 .infoWrapper {
   width: 100%;
   display: flex;
@@ -61,13 +71,13 @@ select {
   margin-bottom: 18px;
   border: 1px solid #706c6c;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .submit-btn {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background-color: #0d0246;
   color: white;
   font-size: 16px;
   border: none;
