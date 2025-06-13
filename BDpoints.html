@@ -28,6 +28,7 @@
           rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="BDpoints.css">
       </head>
       <body>
         <div class="container py-5">
@@ -38,25 +39,85 @@
           <div class="contentWrapper">
               <!-- Boarding and Droppoing Point start-->
               <div class="container">
-                <h2>Choose Your Points</h2>
-
-                <label for="boarding">Boarding Point</label>
-                <select id="boarding">
-                  <option value="">-- Select Boarding Point --</option>
-                  <option value="Station A">Station A</option>
-                  <option value="Station B">Station B</option>
-                  <option value="Station C">Station C</option>
-                </select>
-
-                <label for="dropping">Dropping Point</label>
-                <select id="dropping">
-                  <option value="">-- Select Dropping Point --</option>
-                  <option value="Station X">Station X</option>
-                  <option value="Station Y">Station Y</option>
-                  <option value="Station Z">Station Z</option>
-                </select>
-
-                <button id="continueBtn">Continue to Payment</button>
+                <!-- <h2>Select Boarding & Dropping Points</h2> -->
+            
+                <form id="pointsForm">
+                  <div class="box-wrapper">
+            
+                    <!-- Boarding Point Box -->
+                    <div class="box">
+                      <h3>Boarding point</h3>
+                      <hr>
+                      <div class="bp">
+                        <div class="timePlace">
+                          <p>02:45</p>
+                          <label>Khanapara</label>
+                        </div>
+                        
+                        <input type="radio" name="boarding" value="Station A" required> 
+                      </div>
+                      <div class="bp">
+                        <div class="timePlace">
+                          <p>02:45</p>
+                          <label>ISBT Guwahati</label>
+                        </div>
+                        
+                        <input type="radio" name="boarding" value="Station A" required> 
+                      </div>
+                      <div class="bp">
+                        <div class="timePlace">
+                          <p>02:45</p>
+                          <label>Games Village</label>
+                        </div>
+                        
+                        <input type="radio" name="boarding" value="Station A" required> 
+                      </div>
+                      <div class="bp">
+                        <div class="timePlace">
+                          <p>02:45</p>
+                          <label>Beltola Chariali</label>
+                        </div>
+                        
+                        <input type="radio" name="boarding" value="Station A" required> 
+                      </div>
+                      <div class="bp">
+                        <div class="timePlace">
+                          <p>02:45</p>
+                          <label>Khanapara</label>
+                        </div>
+                        
+                        <input type="radio" name="boarding" value="Station A" required> 
+                      </div>
+                      
+                      
+                    </div>
+            
+                    <!-- Dropping Point Box -->
+                    <div class="box">
+                      <h3>Dropping point</h3>
+                      <hr>
+                      <div class="bp">
+                        <div class="timePlace">
+                          <p>02:45</p>
+                          <label>Kaziranga University</label>
+                        </div>
+                        
+                        <input type="radio" name="dropping" value="Station A" required> 
+                      </div>
+                      <div class="bp">
+                        <div class="timePlace">
+                          <p>02:45</p>
+                          <label>Jorhat Bus Stand</label>
+                        </div>
+                        
+                        <input type="radio" name="dropping" value="Station A" required> 
+                      </div>
+                    </div>
+            
+                  </div>
+            
+                  <button type="submit" class="submit-btn">Continue</button>
+                </form>
               </div>
               <!-- Boarding and Droppoing Point end -->
             </div>
@@ -76,30 +137,24 @@
 
         <!-- Boarding dropping JS -->
         <script>
-          const boardingSelect = document.getElementById("boarding");
-          const droppingSelect = document.getElementById("dropping");
-          const continueBtn = document.getElementById("continueBtn");
+          document.getElementById('pointsForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const boarding = document.querySelector('input[name="boarding"]:checked')?.value;
+      const dropping = document.querySelector('input[name="dropping"]:checked')?.value;
 
-          function checkSelections() {
-            if (boardingSelect.value && droppingSelect.value) {
-              continueBtn.style.display = "block";
-            } else {
-              continueBtn.style.display = "none";
-            }
-          }
-
-          boardingSelect.addEventListener("change", checkSelections);
-          droppingSelect.addEventListener("change", checkSelections);
-
-          continueBtn.addEventListener("click", () => {
-            // Redirect to payment page
-            window.location.href = "payment.html"; // Replace with your payment page URL
-          });
+      if (boarding && dropping) {
+        alert(`Proceeding with:\nBoarding: ${boarding}\nDropping: ${dropping}`);
+        window.location.href = 'info.html'; // Replace with your actual payment page
+      } else {
+        alert("Please select both boarding and dropping points.");
+      }
+    });
 
           let closeIcon = document.querySelector('.closeIcon')
-          closeIcon.addEventListener('click',()=>{
-            window.location.href = "seat.html"
-          })
+         closeIcon.addEventListener('click',()=>{
+          window.location.href = "seat.html"
+         })
+         
 
 
         </script>

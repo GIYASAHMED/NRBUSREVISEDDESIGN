@@ -1,44 +1,102 @@
 /* BOARDING DROPPING CSS */
 .container {
   margin: auto;
-  background: white;
+  background: #fff;
   padding: 30px;
   border-radius: 10px;
-  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
 }
 
 h2 {
+  /* font-size: 17px; */
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.box {
+  width: 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #444;
+  font-weight: 600;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+input[type="radio"] {
+  accent-color: green;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
+.submit-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
   background-color: #0d0246;
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  display: none; /* initially hidden */
+  transition: background 0.3s;
 }
 
-button:hover {
-  background-color: #0d0246c8;
+.submit-btn:hover {
+  background-color: #e65a00;
+}
+
+@media (max-width: 768px) {
+  .box-wrapper {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 100%;
+  }
 }
 /* BOARDING DROPPING CSS */
+.closeIcon {
+  font-size: 30px;
+  cursor: pointer;
+}
+.bp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.timePlace {
+  display: flex;
+  gap: 20px;
+}
+.bp input[type="radio"] {
+  accent-color: green;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
