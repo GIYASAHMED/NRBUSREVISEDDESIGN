@@ -38,7 +38,7 @@
               >
                 <div class="leftNav d-flex align-items-center">
                   <a
-                    href="#"
+                    href="index.html"
                     class="d-flex flex-column justify-content-center align-items-center"
                     ><img
                       class="img-fluid mainLogo"
@@ -207,6 +207,9 @@
         </div>
         <div class="overlay">
           <div class="form-container">
+            <div class="closeIcon text-white">
+              <i class="ri-close-fill"></i>
+            </div>
             <h2>Register/Login</h2>
             <form>
               <div class="form-group">
@@ -261,11 +264,14 @@
         <script src="script.js"></script>
         <script>
           let busCard = document.querySelector(".bc");
-          let popUp = document.querySelector(".popUp");
+          let closeIcon = document.querySelector(".closeIcon");
           let overlay = document.querySelector(".overlay");
 
           busCard.addEventListener("click", () => {
             overlay.classList.add("active");
+          });
+          closeIcon.addEventListener("click", () => {
+            overlay.classList.remove("active");
           });
         </script>
       </body>
