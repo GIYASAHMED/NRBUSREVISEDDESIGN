@@ -261,6 +261,7 @@ header {
   width: 100%;
   border: none;
   outline: none;
+  background-color: transparent;
 }
 .labels p {
   margin-bottom: 0;
@@ -398,7 +399,7 @@ header {
   .fieldsWrapper {
     padding: 20px 10px 40px 10px;
     border-radius: 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.929);
   }
   .fieldItems .t {
     background-color: #0d0246a0;
