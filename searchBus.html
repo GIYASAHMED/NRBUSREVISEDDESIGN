@@ -210,7 +210,7 @@
             <div class="closeIcon text-white">
               <i class="ri-close-fill"></i>
             </div>
-            <h2>Register/Login</h2>
+            <h2>SignUp Now</h2>
             <form>
               <div class="form-group">
                 <label for="name">Full Name</label>
@@ -243,8 +243,8 @@
               </div>
 
               <div class="form-buttons">
-                <button type="submit">Register</button>
-                <button type="button">Login</button>
+                <button type="submit" id="signUp">Signup</button>
+                <!-- <button type="button">Login</button> -->
               </div>
             </form>
           </div>
@@ -272,6 +272,12 @@
           });
           closeIcon.addEventListener("click", () => {
             overlay.classList.remove("active");
+          });
+
+          let signUp = document.querySelector("#signUp");
+
+          signUp.addEventListener("click", () => {
+            window.location.href = "seat.html";
           });
         </script>
       </body>
