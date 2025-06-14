@@ -3,154 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bus Ticket Payment</title>
-    <!-- Remix Icon -->
+    <title>NR BUS Ticket</title>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: "Segoe UI", sans-serif;
-        background: #f5f5f5;
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-      }
-      .logoBox {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        padding: 20px;
+        margin: 0;
+        /* display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
       }
-      .mainLogo {
+
+      .ticket {
+        background: #fff;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .ticket-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      .ticket-header img {
         width: 80px;
         height: 80px;
-        border-radius: 50%;
         object-fit: cover;
+        border-radius: 50%;
       }
-      .brandHeading {
+      .ticket-header span {
+        font-size: 17px;
         text-transform: capitalize;
-        font-family: "Dancing Script", cursive;
-        color: #0d0246;
       }
-      .container {
-        background: #fff;
-        padding: 30px;
-        max-width: 700px;
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      h2 {
-        text-align: center;
-        color: #333;
-        margin-bottom: 25px;
-      }
-
-      .ticket-details {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-bottom: 20px;
-      }
-
-      .ticket-details div {
-        background-color: #f9f9f9;
-        padding: 12px;
-        border-radius: 6px;
-        font-size: 16px;
-      }
-
-      .ticket-details strong {
-        color: #555;
-      }
-
-      .btn {
-        display: block;
-        width: 100%;
-        padding: 14px;
-        font-size: 16px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s ease;
-      }
-
-      .pay-btn {
-        background-color: #007bff;
-        color: white;
+      .travelQuery {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
       }
+      .travelQuery i {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .ticket-header a {
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+      }
 
-      .pay-btn:hover {
-        background-color: #0056b3;
+      .ticket-body {
+        padding-top: 10px;
+      }
+
+      .highlight-box {
+        background: #fff9c4;
+        padding: 10px;
+        margin-top: 15px;
+        border: 1px solid #eee;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .details {
+        margin-top: 15px;
+        border-top: 2px solid #ccc;
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+      }
+
+      .detail-group {
+        font-size: 14px;
+      }
+
+      .detail-group strong {
+        display: block;
+        color: #1a0dab;
+        margin-bottom: 4px;
       }
 
       .download-btn {
-        background-color: #28a745;
-        color: white;
         display: none;
       }
-
-      .download-btn:hover {
-        background-color: #1e7e34;
-      }
-      .ticketHeading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        padding-bottom: 40px;
-      }
-      .ticketHeading i {
-        font-size: 30px;
-        position: absolute;
-        left: 0;
+      .btn {
+        padding: 10px 19px;
+        background-color: #0d0246;
+        color: #fff;
+        border: none;
         cursor: pointer;
       }
+      @media (max-width: 700px) {
+        .details {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
 
-      @media (max-width: 600px) {
-        .ticket-details {
+      @media (max-width: 500px) {
+        .details {
           grid-template-columns: 1fr;
+        }
+
+        .highlight-box {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .btn {
+          margin-top: 30px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="logoBox">
-        <img src="./mainLogo.png" class="mainLogo" alt="" />
-        <span class="brandHeading">Where luxury meets safety & comfort</span>
+    <div class="ticket">
+      <div class="ticket-header">
+        <img src="./mainLogo.png" alt="NRBus Logo" />
+        <div>
+          <span>Travel related queries</span><br />
+          <div class="travelQuery">
+            <i class="ri-phone-fill"></i>
+            <a href="tel:+915555555555">7777777777</a>
+          </div>
+        </div>
       </div>
 
-      <div class="ticketHeading">
-        <i class="ri-arrow-left-line" id="back"></i>
-        <h2>Ticket Confirmation</h2>
-      </div>
+      <div class="ticket-body">
+        <div class="highlight-box">
+          <div>Sunday, June 22, 2025</div>
+          <div>Raj Travels</div>
+        </div>
+        <div class="highlight-box">
+          <div>Khanapara to Jorhat</div>
+          <div class="detail-group">
+            <strong>Passenger name</strong>
+            Mr Manikandan
+          </div>
+          <div class="detail-group">
+            <strong>PNR #</strong>
+            RTRMKHN74837884
+          </div>
+          <div class="detail-group">
+            <strong>Seat Numbers</strong>
+            24, 23
+          </div>
+        </div>
 
-      <div class="ticket-details" id="ticketDetails">
-        <div><strong>Name:</strong> John Doe</div>
-        <div><strong>Age:</strong> 28</div>
-        <div><strong>Gender:</strong> Male</div>
-        <div><strong>Mobile:</strong> +91 9876543210</div>
-        <div><strong>Email:</strong> john.doe@example.com</div>
-        <div><strong>Seat No:</strong> A3</div>
-        <div><strong>Bus Name:</strong> Assam Volvo A/C</div>
-        <div><strong>Route:</strong> Guwahati ISBT → Tezpur Terminal</div>
-        <div><strong>Boarding Point:</strong> Guwahati ISBT</div>
-        <div><strong>Dropping Point:</strong> Tezpur Terminal</div>
-        <div><strong>Date:</strong> 15-06-2025</div>
-        <div><strong>Time:</strong> 14:20 → 17:40</div>
-        <div><strong>Fare:</strong> ₹540</div>
-      </div>
+        <div class="details">
+          <div class="detail-group">
+            <strong>NRBus ticket #</strong>
+            TCA483435694
+          </div>
 
-      <button class="btn pay-btn" onclick="completePayment()">Pay ₹540</button>
+          <div class="detail-group">
+            <strong>Bus Type</strong>
+            Non A/C Seater (2+2)
+          </div>
+          <div class="detail-group">
+            <strong>Reporting Time</strong>
+            09:45 PM
+          </div>
+          <div class="detail-group">
+            <strong>Departure Time</strong>
+            10:00 PM
+          </div>
+          <div class="detail-group">
+            <strong>Total Fare</strong>
+            Rs. 540.00
+          </div>
+          <div class="detail-group">
+            <strong>Boarding point address</strong>
+            <b>Location:</b> Periyar Bus Stand<br />
+            <b>Landmark:</b> Periyar Bus Stand<br />
+            <b>Address:</b> C/O Rajalakshmi Travels,<br />
+            Shop No.7 and 8, Periyar Bus Stand,<br />
+            Madurai-1
+          </div>
+        </div>
+      </div>
+      <button class="btn pay-btn" onclick="completePayment()">
+        Pay on board
+      </button>
       <button
         class="btn download-btn"
         id="downloadBtn"
@@ -164,16 +215,9 @@
       function completePayment() {
         // Simulate successful payment
         document.querySelector(".pay-btn").style.display = "none";
-        // if you need payment page here is the link for redirect to payment.html....
-        // window.location.href = "payment.html";
         document.getElementById("downloadBtn").style.display = "block";
-        alert("Payment successful! Your ticket is ready.");
+        alert("Your ticket is ready. Please pay on Board");
       }
-
-      let back = document.querySelector("#back");
-      back.addEventListener("click", () => {
-        window.location.href = "info.html";
-      });
     </script>
   </body>
 </html>
